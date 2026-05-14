@@ -1,0 +1,121 @@
+.compound-display {
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  border-left: 5px solid #667eea;
+}
+
+.compound-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.compound-header h2 {
+  color: #667eea;
+  font-size: 2em;
+}
+
+.category-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.compound-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  color: #764ba2;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  text-transform: uppercase;
+}
+
+.formula, .smiles {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1em;
+  color: #667eea;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.info-card ul {
+  list-style: none;
+}
+
+.info-card li {
+  padding: 5px 0;
+  color: #555;
+}
+
+.info-card li:before {
+  content: "• ";
+  color: #667eea;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.compound-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 15px;
+}
+
+.description-card, .naming-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-card h3, .naming-card h3 {
+  color: #764ba2;
+  margin-bottom: 15px;
+}
+
+.description-card p, .naming-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+.naming-card p {
+  background: #f0f4ff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+@media (max-width: 768px) {
+  .compound-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .compound-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compound-full {
+    grid-template-columns: 1fr;
+  }
+}
